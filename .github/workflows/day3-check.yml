@@ -10,7 +10,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install dependencies
-        run: pip install -r accessevent/requirements.txt
+        run: pip install -r $(find . -name requirements.txt | head -n 1)
       - name: Check project structure
         run: |
           test -f app.py
